@@ -9,7 +9,7 @@ import Toggle from "./component/Toggle";
 
 function App() {
   return (
-    <AppWrapper>
+    <>
       <Toggle />
       <AppHr />
       <Modal />
@@ -21,15 +21,11 @@ function App() {
       <AutoComplete />
       <AppHr />
       <ClickToEdit />
-    </AppWrapper>
+    </>
   );
 }
 
 export default App;
-
-const AppWrapper = styled.div`
-  text-align: center;
-`;
 
 const AppHr = styled.hr`
   border: solid 3px #000000;
