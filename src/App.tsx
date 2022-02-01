@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import AutoComplete from "./component/AutoComplete";
+import ClickToEdit from "./component/ClickToEdit";
+import Modal from "./component/Modal";
+import Tab from "./component/Tab";
+import Tag from "./component/Tag";
+import Toggle from "./component/Toggle";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrapper>
+      <Toggle />
+      <AppHr />
+      <Modal />
+      <AppHr />
+      <Tab />
+      <AppHr />
+      <Tag />
+      <AppHr />
+      <AutoComplete />
+      <AppHr />
+      <ClickToEdit />
+    </AppWrapper>
   );
 }
 
 export default App;
+
+const AppWrapper = styled.div`
+  text-align: center;
+`;
+
+const AppHr = styled.hr`
+  border: solid 3px #000000;
+`;
